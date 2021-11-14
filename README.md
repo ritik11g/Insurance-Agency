@@ -1,2 +1,2 @@
 # InsuranceAgency
-my dbms project
+My Database Management Project
