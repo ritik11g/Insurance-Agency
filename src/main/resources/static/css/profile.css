@@ -1,0 +1,34 @@
+.sidebar {
+	min-width: 300px;
+	color: #fff;
+}
+
+.sidebar-sticky {
+	border-radius: 1rem;
+	box-shadow: var(--shadow);
+	padding: 2rem;
+	position: -webkit-sticky;
+	position: sticky;
+	margin: 1rem;
+	top: 100px;
+	background-color: var(--secondary-color);
+}
+.card {
+	padding: 0;
+}
+.sidebar .nav-item {
+	border-radius: 0.5rem;
+	transition: background-color 0.3s;
+	background-color: #fff1;
+	margin: 0.3rem;
+}
+.sidebar .nav-item:hover {
+	background-color: #0002;
+}
+.profile {
+	margin-bottom: 1rem;
+}
+.profile p {
+	margin: 0;
+	text-align: center;
+}
