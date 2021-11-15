@@ -38,7 +38,7 @@ public class RegistrationEmailListener implements ApplicationListener<OnRegistra
         SimpleMailMessage email = new SimpleMailMessage();
         email.setTo(recipient);
         email.setSubject(subject);
-        email.setText(message + "http://localhost:8080" + url);
+        email.setText(message + "http://jk-insurance.azurewebsites.net/" + url);
         mailSender.send(email);
     }
 }
