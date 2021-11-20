@@ -22,13 +22,13 @@
             </div>
             <form class="form-signin" th:action="@{/register}" method="POST" th:object="${user}">
                 <p class="alert alert-danger" th:if="${emailError}">Email already in use.</p>
-                <input class="form-control" type="text" placeholder="Email Address" name="email" th:field="*{email}"
+                <input class="form-control" type="email" placeholder="Email Address" name="email" th:field="*{email}"
                     required>
-                <input class="form-control" type="text" placeholder="First Name" name="first_name"
+                <input class="form-control" type="text" pattern="[a-zA-Z]+" placeholder="First Name" name="first_name"
                     th:field="*{firstName}" required>
-                <input class="form-control" type="text" placeholder="Last Name" name="last_name" th:field="*{lastName}"
+                <input class="form-control" type="text" pattern="[a-zA-Z]+" placeholder="Last Name" name="last_name" th:field="*{lastName}"
                     required>
-                <input class="form-control" type="text" placeholder="Phone Number" th:field="*{phoneNo}" required>
+                <input class="form-control" type="number" min="1000000000" max="9999999999" placeholder="Phone Number" th:field="*{phoneNo}" required>
                 <input class="form-control" type="text" placeholder="Address" th:field="*{address}" required>
                 <input class="form-control" type="password" name="password" placeholder="Password"
                     th:field="*{password}" required>

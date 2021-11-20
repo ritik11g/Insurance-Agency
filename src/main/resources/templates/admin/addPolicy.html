@@ -22,9 +22,9 @@
             <option value="vehicle">vehicle</option>
             <option value="property">property</option>
         </select>
-        <input class="form-control" placeholder="Premium" type="number" th:field="*{premium}" required>
-        <input class="form-control" placeholder="Claim amount" type="number" th:field="*{maxClaimAmount}" required>
-        <input class="form-control" placeholder="Details" type="text" th:field="*{thingsCovered}" required>
+        <input class="form-control" placeholder="Premium" type="number" min="1" th:field="*{premium}" required>
+        <input class="form-control" placeholder="Claim amount" type="number" min="1" th:field="*{maxClaimAmount}" required>
+        <input class="form-control" placeholder="Details" type="text" pattern="[a-zA-Z0-9]+" th:field="*{thingsCovered}" required>
         <select class="form-control" th:field="*{expirationStatus}" required>
             <option value="">Status</option>
             <option value="expired">Expired</option>
