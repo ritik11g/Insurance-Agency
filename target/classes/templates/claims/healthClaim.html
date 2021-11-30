@@ -15,8 +15,8 @@
 <div class="form-div">
 <form class="form-signin" th:action="@{/claims/health/{id}(id=${healthClaim.getRecordId()})}"  method="post" enctype="multipart/form-data">
     <div class="mb-3 bg-dark p-3 rounded-circle text-light" style="width:100px; height:100px; margin:auto; font-size:50px">JK</div>
-    <input class="form-control" placeholder="Damage Amount" th:field="*{healthClaim.damage}" type="number" >
-    <input class="form-control" placeholder="Date of Loss" name="date" type="date">
+    <input class="form-control" placeholder="Damage Amount" th:field="*{healthClaim.damage}" type="number" min="1">
+    <input class="form-control" placeholder="Date of Loss" name="date" type="date" min="2021-11-20">
     <input class="form-control" placeholder="Proof document" type="file" name="file">
     <button class="btn btn-lg text-white bg-theme1 btn-block" type="submit">Submit</button>
 </form>

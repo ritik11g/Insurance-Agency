@@ -17,9 +17,9 @@
         <select class="form-control" name="objectId" required>
             <option th:each="vehicle: ${vehicles}" th:value="${vehicle.getId()}" th:text="${vehicle.getVehicleNumber()}"></option>
         </select>
-        <input class="form-control" type="text" placeholder="card number" required>
-        <input class="form-control" type="text" placeholder="cvv" required>
-        <input class="form-control" type="date" placeholder="expiry date" required>
+        <input class="form-control" type="number" min="1000000000000000" placeholder="card number" required>
+        <input class="form-control" type="password" placeholder="cvv" required>
+        <input class="form-control" type="date" min="2021-11-20" placeholder="expiry date" required>
         <button class="btn btn-lg text-white bg-theme1 btn-block" type="submit">Submit</button>
     </form>
 </div>
@@ -29,9 +29,9 @@
         <select class="form-control" name="objectId" required>
             <option th:each="property : ${properties}" th:value="${property.getId()}" th:text="${property.getName()}"></option>
         </select>
-        <input class="form-control" type="text" placeholder="card number" required>
-        <input class="form-control" type="text" placeholder="cvv" required>
-        <input class="form-control" type="date" placeholder="expiry date" required>
+        <input class="form-control" type="number" min="1000000000000000" placeholder="card number" required>
+        <input class="form-control" type="password" placeholder="cvv" required>
+        <input class="form-control" type="date" min="2021-11-20" placeholder="expiry date" required>
         <button class="btn btn-lg text-white bg-theme1 btn-block" type="submit">Submit</button>
     </form>
 </div>
@@ -39,9 +39,9 @@
     <form class="form-signin" th:action="@{/policy/{id}/buy(id=${policy.getId()})}" method="post" >
         <div class="mb-3 bg-dark p-3 rounded-circle text-light" style="width:100px; height:100px; margin:auto; font-size:50px">JK</div>
         <input class="form-control" type="text" value="0" name="objectId" hidden>
-        <input class="form-control" type="text" placeholder="card number" required>
-        <input class="form-control" type="text" placeholder="cvv" required>
-        <input class="form-control" type="date" placeholder="expiry date" required>
+        <input class="form-control" type="number" min="1000000000000000" placeholder="card number" required>
+        <input class="form-control" type="password" placeholder="cvv" required>
+        <input class="form-control" type="date" min="2021-11-20" placeholder="expiry date" required>
         <button class="btn btn-lg text-white bg-theme1 btn-block" type="submit">Submit</button>
     </form>
 </div>
